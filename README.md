@@ -7,11 +7,16 @@
 
 ## How to Use:
 
-`docker build -t duckdns-riscv64:latest . `
+```bash
+docker build -t duckdns-riscv64:latest .
+```
 
-``docker run -d \
+```bash
+  docker run -d \
   --name duckdns \
   --network=host \  
   -e SUBDOMAINS="yourdomaine" \
   -e TOKEN="yourtoken" \
-  -v <pathto>/logs:/logs duckdns-riscv64:latest ``
+  -v <pathto>/logs:/logs \
+  duckdns-riscv64:latest 
+```
